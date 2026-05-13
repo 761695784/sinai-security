@@ -45,8 +45,8 @@ export default function RootLayout({
     <html lang="fr" className={`${inter.variable} ${poppins.variable}`}>
       <head>
         <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(){var t=localStorage.getItem('sinai-theme');if(t==='dark'){document.documentElement.classList.add('dark');}})();`,
+           dangerouslySetInnerHTML={{
+            __html: `(function(){var t=localStorage.getItem('sinai-theme');if(t==='light'){document.documentElement.classList.remove('dark');}else{document.documentElement.classList.add('dark');}})();`,
           }}
         />
       </head>

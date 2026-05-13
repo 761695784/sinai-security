@@ -7,17 +7,19 @@ export function ThemeToggle() {
   const [isDark, setIsDark] = useState(false)
   const [mounted, setMounted] = useState(false)
 
-  useEffect(() => {
-    setMounted(true)
-    const saved = localStorage.getItem("sinai-theme")
-    if (saved === "dark") {
-      document.documentElement.classList.add("dark")
-      setIsDark(true)
-    } else {
-      document.documentElement.classList.remove("dark")
-      setIsDark(false)
-    }
-  }, [])
+useEffect(() => {
+  setMounted(true)
+  const saved = localStorage.getItem("sinai-theme")
+  if (saved === "light") {
+    document.documentElement.classList.remove("dark")
+    setIsDark(false)
+  } else {
+    // dark par défaut si rien de sauvegardé
+    document.documentElement.classList.add("dark")
+    localStorage.setItem("sinai-theme", "dark")
+    setIsDark(true)
+  }
+}, [])
 
   const toggleTheme = () => {
     const next = !isDark
