@@ -96,32 +96,30 @@ export function Header() {
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="p-2 rounded-lg bg-secondary text-foreground"
-              aria-label="Menu"
+              aria-label="Menu" 
+              style={{ color: '#C8A24D' }}
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>
+      </div>
 
-        {/* Mobile Navigation */}
-        <div
-          className={cn(
-            "lg:hidden overflow-hidden transition-all duration-300",
-            isOpen ? "max-h-96 pb-6" : "max-h-0"
-          )}
-        >
-          <nav className="flex flex-col gap-2 pt-4">
+      {/* Mobile Navigation */}
+      {isOpen && (
+        <div className="lg:hidden fixed inset-0 top-20 z-40 bg-background border-t border-border overflow-y-auto">
+          <nav className="flex flex-col gap-2 p-4">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
                 onClick={() => setIsOpen(false)}
-                className="px-4 py-3 text-foreground hover:bg-secondary rounded-lg transition-colors"
+                className="px-4 py-4 text-lg font-medium text-foreground hover:bg-secondary rounded-lg transition-colors"
               >
                 {item.name}
               </Link>
             ))}
-            <div className="mt-4 px-4 flex flex-col gap-3">
+            <div className="mt-6 px-4 flex flex-col gap-3">
               <a
                 href="tel:+221338680426"
                 className="flex items-center gap-2 text-muted-foreground"
@@ -135,7 +133,7 @@ export function Header() {
             </div>
           </nav>
         </div>
-      </div>
+      )}
     </header>
   )
 }

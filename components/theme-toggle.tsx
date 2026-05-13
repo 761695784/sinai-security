@@ -40,7 +40,7 @@ useEffect(() => {
         disabled
         aria-label="Chargement du thème"
       >
-        <Sun className="w-5 h-5" />
+        <Sun className="w-5 h-5" style={{ color: '#C8A24D' }} />
       </button>
     )
   }
@@ -50,8 +50,9 @@ useEffect(() => {
       onClick={toggleTheme}
       className="p-2 rounded-lg bg-secondary text-secondary-foreground hover:opacity-80 transition-colors"
       aria-label={isDark ? "Passer en mode clair" : "Passer en mode sombre"}
+      style={{ color: '#C8A24D' }}
     >
-      {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+      {isDark ? <Sun className="w-5 h-5" style={{ color: '#C8A24D' }} /> : <Moon className="w-5 h-5"  />}
     </button>
   )
 }
