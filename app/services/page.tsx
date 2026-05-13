@@ -38,7 +38,7 @@ const services = [
       "Intervention 24h/24",
       "Agents formés et certifiés",
     ],
-    image: "/images/gallery/security-patrol.jpg",
+    image: "/images/gallery/route-sinai.jpg",
   },
   {
     id: "vip",
@@ -54,7 +54,7 @@ const services = [
       "Discrétion absolue",
       "Coordination avec les autorités",
     ],
-    image: "/images/gallery/vip-protection.jpg",
+    image: "/images/gallery/team-top.jpg",
   },
   {
     id: "evenement",
@@ -70,7 +70,7 @@ const services = [
       "Équipe d'intervention rapide",
       "Coordination avec les secours",
     ],
-    image: "/images/gallery/event-security.jpg",
+    image: "/images/gallery/gardinnage-sinai.jpg",
   },
   {
     id: "acces",
@@ -86,7 +86,7 @@ const services = [
       "Historique des passages",
       "Intégration avec vidéosurveillance",
     ],
-    image: "/images/gallery/access-control.jpg",
+    image: "/images/gallery/team-stade.jpg",
   },
   {
     id: "surveillance",
@@ -118,7 +118,7 @@ const services = [
       "Assurance complète",
       "Confidentialité garantie",
     ],
-    image: "/images/gallery/team-training.jpg",
+    image: "/images/gallery/taf-top.jpg",
   },
 ]
 

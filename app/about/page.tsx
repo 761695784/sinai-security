@@ -122,7 +122,7 @@ export default function AboutPage() {
               <div className="relative">
                 <div className="aspect-square rounded-2xl overflow-hidden">
                   <Image
-                    src="/images/gallery/team-training.jpg"
+                    src="/images/gallery/team.jpg"
                     alt="Équipe SINAI SECURITE en formation"
                     fill
                     className="object-cover"
@@ -256,7 +256,7 @@ export default function AboutPage() {
                       src={member.image}
                       alt={member.name}
                       fill
-                      className="object-cover"
+                      className="object-fill"
                       sizes="192px"
                     />
                   </div>
